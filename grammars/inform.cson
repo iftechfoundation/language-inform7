@@ -12,12 +12,10 @@
         'name' : 'keyword.control'
         'begin': '\\['
         'beginCaptures':
-          '0':
-            'name': 'keyword.control.begin.inform7'
+          '0': { 'name': 'keyword.control.begin.inform7' }
         'end': '\\]'
         'endCaptures':
-          '0':
-            'name': 'keyword.control.end.inform7'
+          '0': { 'name': 'keyword.control.end.inform7' }
       }
     ]
   'nestedcomment':
@@ -58,16 +56,16 @@
 }
 
 'patterns': [
+
+  # Strings. These can contained [substitutions].
   {
     'name': 'string.quoted.double.inform7'
     'begin': '"'
     'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.string.begin.inform7'
+      '0': { 'name': 'punctuation.definition.string.begin.inform7' }
     'end': '"'
     'endCaptures':
-      '0':
-        'name': 'punctuation.definition.string.end.inform7'
+      '0': { 'name': 'punctuation.definition.string.end.inform7' }
     'patterns': [
       {
         'include': '#substitution'
@@ -80,12 +78,10 @@
     'name': 'comment.block.inform7'
     'begin': '\\['
     'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.comment.begin.inform7'
+      '0': { 'name': 'punctuation.definition.comment.begin.inform7' }
     'end': '\\]'
     'endCaptures':
-      '0':
-        'name': 'punctuation.definition.comment.end.inform7'
+      '0': { 'name': 'punctuation.definition.comment.end.inform7' }
     'patterns': [
       {
         'include': '#nestedcomment'
@@ -98,7 +94,7 @@
   {
     'name': 'entity.name.inform7'
     'match': '(?i)^\\s*(volume|book|part|chapter|section)[ \t]+(.*)$'
-    captures: {
+    'captures': {
       1: { 'name': 'entity.type.section.inform7' }
       2: { 'name': 'entity.name.section.inform7' }
     }
