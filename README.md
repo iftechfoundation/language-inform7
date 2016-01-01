@@ -17,4 +17,6 @@ This correctly colors:
 
 I do not try to color all of Inform 6 syntax. (There's a standard algorithm for this, but it's not regexp-based and I never liked it anyhow.) I just color I6 strings, dict words, and comments within I6 inclusions.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+Known bugs: I7 requires section headers to be set off by blank lines above and below. This grammar does not check that requirement.
+
+![Screenshot](https://cloud.githubusercontent.com/assets/65666/12072581/bf622752-b0b3-11e5-98b4-19dd0179fac4.png)
