@@ -72,7 +72,11 @@
 
   # Header lines. These are case-insensitive and can be indented.
   {
-    'name': 'entity.name.section.inform7'
-    'match': '(?i)^\\s*(volume|book|part|chapter|section).*$'
+    'name': 'entity.name.inform7'
+    'match': '(?i)^\\s*(volume|book|part|chapter|section)[ \t]+(.*)$'
+    captures: {
+      1: { 'name': 'entity.type.section.inform7' }
+      2: { 'name': 'entity.name.section.inform7' }
+    }
   }
 ]
