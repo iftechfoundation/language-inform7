@@ -112,15 +112,9 @@
       0: { 'name': 'punctuation.definition.inform6.end.inform7' }
       }
     'patterns': [
-      {
-        'include': '#i6comment'
-      }
-      {
-        'include': '#i6string'
-      }
-      {
-        'include': '#i6dictword'
-      }
+      { 'include': '#i6comment' }
+      { 'include': '#i6string' }
+      { 'include': '#i6dictword' }
     ]
   }
 
