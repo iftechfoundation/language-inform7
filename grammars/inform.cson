@@ -79,4 +79,21 @@
       2: { 'name': 'entity.name.section.inform7' }
     }
   }
+
+  # Inform 6 inclusions. This could include a whole separate grammar for I6 code, but I don't currently have one set up, so we just mark I6 comments and strings.
+  {
+    'contentName': 'support.other.inform6.inform7'
+    'begin': '\\(-'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.inform6.begin.inform7'
+    'end': '-\\)'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.inform6.end.inform7'
+    'patterns': [
+      {
+      }
+    ]
+  }
 ]
