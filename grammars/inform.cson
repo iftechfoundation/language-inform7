@@ -35,8 +35,24 @@
   'i6comment':
     'patterns': [
       {
-        'name': 'comment.line.bang'
+        'name': 'comment.line.bang.inform6.inform7'
         'match': '!.*$'
+      }
+    ]
+  'i6string':
+    'patterns': [
+      {
+        'name': 'string.quoted.double.inform6.inform7'
+        'begin': '"'
+        'end': '"'
+      }
+    ]
+  'i6dictword':
+    'patterns': [
+      {
+        'name': 'string.quoted.single.inform6.inform7'
+        'begin': '\''
+        'end': '\''
       }
     ]
 }
@@ -101,6 +117,12 @@
     'patterns': [
       {
         'include': '#i6comment'
+      }
+      {
+        'include': '#i6string'
+      }
+      {
+        'include': '#i6dictword'
       }
     ]
   }
