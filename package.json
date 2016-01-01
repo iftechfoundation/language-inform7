@@ -1,11 +1,11 @@
 {
-  "name": "language-inform",
-  "version": "1.0",
+  "name": "language-inform7",
+  "version": "1.0.0",
   "description": "Inform 7 package for Atom",
-  "repository": "https://github.com/erkyrath/language-inform",
+  "repository": "https://github.com/erkyrath/language-inform7",
   "license": "MIT",
   "engines": {
-    "atom": ">1.0"
+    "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {}
 }
