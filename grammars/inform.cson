@@ -1,0 +1,78 @@
+'scopeName': 'source.inform'
+'fileTypes': [
+  'ni'
+  'i7x'
+]
+'name': 'Inform 7'
+
+'repository': {
+  'substitution':
+    'patterns': [
+      {
+        'name' : 'keyword.control'
+        'begin': '\\['
+        'beginCaptures':
+          '0':
+            'name': 'keyword.control.begin.inform'
+        'end': '\\]'
+        'endCaptures':
+          '0':
+            'name': 'keyword.control.end.inform'
+      }
+    ]
+  'nestedcomment':
+    'patterns': [
+        {
+          'begin': '\\['
+          'end': '\\]'
+          'patterns': [
+            {
+              'include': '#nestedcomment'
+            }
+          ]
+        }
+    ]
+}
+
+'patterns': [
+  {
+    'name': 'string.quoted.double.inform'
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.inform'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.inform'
+    'patterns': [
+      {
+        'include': '#substitution'
+      }
+    ]
+  }
+
+  # Comments. These can be nested!
+  {
+    'name': 'comment.block.inform'
+    'begin': '\\['
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.begin.inform'
+    'end': '\\]'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.end.inform'
+    'patterns': [
+      {
+        'include': '#nestedcomment'
+      }
+    ]
+  }
+
+  # Header lines. These are case-insensitive and can be indented.
+  {
+    'name': 'entity.name.section.inform'
+    'match': '(?i)^\\s*(volume|book|part|chapter|section).*$'
+  }
+]
