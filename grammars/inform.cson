@@ -22,15 +22,22 @@
     ]
   'nestedcomment':
     'patterns': [
-        {
-          'begin': '\\['
-          'end': '\\]'
-          'patterns': [
-            {
-              'include': '#nestedcomment'
-            }
-          ]
-        }
+      {
+        'begin': '\\['
+        'end': '\\]'
+        'patterns': [
+          {
+            'include': '#nestedcomment'
+          }
+        ]
+      }
+    ]
+  'i6comment':
+    'patterns': [
+      {
+        'name': 'comment.line.bang'
+        'match': '!.*$'
+      }
     ]
 }
 
@@ -93,6 +100,7 @@
         'name': 'punctuation.definition.inform6.end.inform7'
     'patterns': [
       {
+        'include': '#i6comment'
       }
     ]
   }
