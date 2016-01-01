@@ -53,6 +53,13 @@
         'end': '\''
       }
     ]
+  'doccomment':
+    'patterns': [
+      {
+        'name': 'comment.block.documentation.inform7'
+        'match': '^[^\t].*$'
+      }
+    ]
 }
 
 'patterns': [
@@ -121,14 +128,19 @@
   # The documentation at the end of an Inform extension.
   # The "---- DOCUMENTATION ----" line is case-insensitive and can be indented.
   # Whitespace is required around the word "DOCUMENATION", but it doesn't matter how much.
+  # We only apply the comment.block.documentation style to lines which *don't* begin with a tab. See the #doccomment pattern above.
   # Text after the second "----" is accepted as part of the doc comment, although I hope nobody does that.
   {
-    'contentName': 'comment.block.documentation.inform7'
-    'begin': '(?i)^\\s*(----[ \t]+(documentation)[ \t]+----)'
+    'contentName': 'meta.documentation.inform7'
+    'begin': '(?i)^\\s*(----[ \t]+(documentation)[ \t]+----)(.*)$'
     'end': '$ENDOFDOC'  # This regexp can never match anything! We want to run to end-of-file.
     'beginCaptures': {
       1: { 'name': 'entity.name.inform7' }
       2: { 'name': 'entity.type.section.inform7' }
+      3: { 'name': 'comment.block.documentation.inform7' }
     }
+    'patterns': [
+      { 'include': '#doccomment' }
+    ]
   }
 ]
