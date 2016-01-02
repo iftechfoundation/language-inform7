@@ -12,11 +12,13 @@
       {
         'name': 'string.quoted.double.inform7'
         'begin': '"'
-        'beginCaptures':
+        'beginCaptures': {
           '0': { 'name': 'punctuation.definition.string.begin.inform7' }
+        }
         'end': '"'
-        'endCaptures':
+        'endCaptures': {
           '0': { 'name': 'punctuation.definition.string.end.inform7' }
+        }
         'patterns': [
           {
             'include': '#substitution'
@@ -31,11 +33,13 @@
       {
         'name' : 'keyword.control'
         'begin': '\\['
-        'beginCaptures':
+        'beginCaptures': {
           '0': { 'name': 'keyword.control.begin.inform7' }
+        }
         'end': '\\]'
-        'endCaptures':
+        'endCaptures': {
           '0': { 'name': 'keyword.control.end.inform7' }
+        }
       }
     ]
 
@@ -99,15 +103,15 @@
   {
     'name': 'comment.block.inform7'
     'begin': '\\['
-    'beginCaptures':
+    'beginCaptures': {
       '0': { 'name': 'punctuation.definition.comment.begin.inform7' }
+    }
     'end': '\\]'
-    'endCaptures':
+    'endCaptures': {
       '0': { 'name': 'punctuation.definition.comment.end.inform7' }
+    }
     'patterns': [
-      {
-        'include': '#nestedcomment'
-      }
+      { 'include': '#nestedcomment' }
     ]
   }
 
