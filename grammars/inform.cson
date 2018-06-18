@@ -4,6 +4,7 @@
   'i7x'
 ]
 'name': 'Inform 7'
+'limitLineLength': no
 
 'repository': {
   # Strings. These can contain [substitutions].
