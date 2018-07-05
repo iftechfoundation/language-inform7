@@ -5,6 +5,7 @@
 ]
 'name': 'Inform 7'
 'limitLineLength': no
+'maxTokensPerLine': 1000
 
 'repository': {
   # Strings. These can contain [substitutions].
