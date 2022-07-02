@@ -1,6 +1,6 @@
 {
   "name": "language-inform7",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Inform 7 package for Atom",
   "repository": "https://github.com/iftechfoundation/language-inform7",
   "license": "MIT",
