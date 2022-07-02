@@ -1,6 +1,7 @@
 Inform 7 language grammar for Atom
+- Supported by the [Interactive Fiction Technology Foundation][iftf]
 - Created by Andrew Plotkin <erkyrath@eblong.com>
-- https://github.com/erkyrath/language-inform7
+- https://github.com/iftechfoundation/language-inform7
 - https://atom.io/packages/language-inform7
 
 This package permits syntax coloring of [Inform 7][i7] source code in the [Atom][] editor (and compatible syntax colorers).
@@ -10,6 +11,7 @@ This started as a fork of [Robert Clarke's Inform grammar][kumo]. It's turned in
 [i7]: http://inform7.com/
 [atom]: https://atom.io/
 [kumo]: https://github.com/kumo/language-inform
+[iftf]: https://iftechfoundation.org/
 
 This correctly colors:
 
